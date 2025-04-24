@@ -1,2 +1,4 @@
 # config file with toke
 config.json
+notes.txt
+.gitignore
