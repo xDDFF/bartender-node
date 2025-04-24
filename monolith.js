@@ -1,4 +1,4 @@
-// Import the necessary classes from discord.js
+// mport the necessary classes from discord.js
 const { Client, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 
@@ -18,9 +18,19 @@ client.once('ready', () => {
 
 // Event: When a message is sent in a server
 client.on('messageCreate', message => {
+
+// command template
+/// !<command>
+//	if (message.content === '!<command?') {
+//		message.channel.send('');
+//	}
+
+// !ping
   if (message.content === '!ping') {
     message.channel.send('Pong!');
 		}
+
+// !pack
 	if (message.content === '!pack') {;
 		message.channel.send("`\\|/\\|/ ` **listen up... public announcement**: Pick it, Pack it, just be ready for a chan wide toke-out in 30 seconds. `\\|/\\|/`");
     setTimeout(() => {
@@ -33,6 +43,8 @@ client.on('messageCreate', message => {
       setTimeout(() => {message.channel.send("SYNCHRONIZED! `\\|/\\|/` FIRE UP YOUR DANK SHIT!! `\\|/\\|/`")}, 6500);
     }, 30000);
 	}
+
+// !rounds
 	if(message.content === '!rounds') {
 		message.channel.send("`Everyone get your drinks ready! We are doing shots in 30 secs!!`");
  	setTimeout(() => {
@@ -45,10 +57,21 @@ client.on('messageCreate', message => {
  	}, 30000);
 	}
 
+// !beer
   if (message.content === '!beer') {
     message.channel.send('Here! take this! an ice cold beer! is a Warsteiner! Prost!');
 		}
+
+// !dff
+	if (message.content === '!dff') {
+		message.channel.send('DFF: Dobby the Faggot Ferret!!!1 <3 https://i.imgur.com/7nac3rM.jpg');
+	}
+// !taxes
+	if (message.content === '!taxes') {
+		message.channel.send('TAXES?! I think you better look at this!! http://i.imgur.com/mxrbcBX.jpg');
+	}
 });
+
 // Log in to Discord with your bot token
 client.login(token);
 
