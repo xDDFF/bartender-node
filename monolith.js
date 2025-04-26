@@ -13,19 +13,20 @@ const client = new Client({
 
 // Event: When the bot is ready
 client.once('ready', () => {
-  console.log(`${client.user.tag}!is online MOTHERUCKET!!`);
+  console.log(`${client.user.tag}! is online MOTHERFUCKET!1!`);
 });
 
 // Event: When a message is sent in a server
 client.on('messageCreate', message => {
 
-//const args = message.content.slice().trim().split(/ +/g);
-//let taggedUser = args[0];
+const args = message.content.slice().trim().split(/ +/g);
+const cmd = args.shift().toLowerCase();
+let taggedUser = args[0];
 
 
 /// !<command>
 // command template
-//	if (message.content === '!<command?') {
+//	if (message.content === '!<command' || message.content === '!command ${args}') {
 //		message.channel.send('');
 //	}
 
@@ -90,8 +91,16 @@ client.on('messageCreate', message => {
 		message.channel.send(`WATCHES AS ${message.author} SLAHES IT'S OWN WRISTS!!1`);
 		message.channel.send('i guess being a faggot and picking extra shifts at th ick factory was to much!1!');
 	}
-});
 
+// !bong
+	if (message.content == `!bong ${args}`) {
+		message.channel.send(`Passed the bong to ${taggedUser}`);
+		message.channel.send('Lets get baked bitch! You better not be parking on that grass!');
+	}
+
+
+
+});
 // Log in to Discord with your bot token
 client.login(token);
 
