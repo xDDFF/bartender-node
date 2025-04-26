@@ -85,6 +85,11 @@ client.on('messageCreate', message => {
 		message.channel.send('He is the best builder there is, his knowledge of physics empowers his building skills.');
 	}
 
+// !wrists
+	if (message.content == '!wrists') {
+		message.channel.send(`WATCHES AS ${message.author} SLAHES IT'S OWN WRISTS!!1`);
+		message.channel.send('i guess being a faggot and picking extra shifts at th ick factory was to much!1!');
+	}
 });
 
 // Log in to Discord with your bot token
