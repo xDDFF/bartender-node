@@ -1,4 +1,4 @@
-// mport the necessary classes from discord.js
+// Import the necessary classes from discord.js
 const { Client, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 
@@ -19,8 +19,12 @@ client.once('ready', () => {
 // Event: When a message is sent in a server
 client.on('messageCreate', message => {
 
-// command template
+//const args = message.content.slice().trim().split(/ +/g);
+//let taggedUser = args[0];
+
+
 /// !<command>
+// command template
 //	if (message.content === '!<command?') {
 //		message.channel.send('');
 //	}
@@ -70,6 +74,17 @@ client.on('messageCreate', message => {
 	if (message.content === '!taxes') {
 		message.channel.send('TAXES?! I think you better look at this!! http://i.imgur.com/mxrbcBX.jpg');
 	}
+
+// !interdome
+	if (message.content === '!interdome') {
+		message.channel.send('interdome? that nigga in #201337, he is so fucking 80s, he is listening to gg allin!!');
+	}
+
+// !applegroo
+	if (message.content == '!applegroo') {
+		message.channel.send('He is the best builder there is, his knowledge of physics empowers his building skills.');
+	}
+
 });
 
 // Log in to Discord with your bot token
